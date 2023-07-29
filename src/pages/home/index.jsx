@@ -1,10 +1,10 @@
 import React from "react";
-import { HomeComporent } from "../../components/homeComponent";
+import { HomeComponent } from "../../components/homeComponent";
 
 export const Home = () => {
   
 
   return (
-    <HomeComporent />
+    <HomeComponent />
   )
 }

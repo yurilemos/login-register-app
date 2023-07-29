@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../button";
 
 
-export const HomeComporent = () => {
+export const HomeComponent = () => {
   const { signout } = useAuth();
   const navigate = useNavigate();
 

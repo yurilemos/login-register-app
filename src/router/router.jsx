@@ -5,6 +5,7 @@ import { Register } from "../pages/register";
 import { Login } from "../pages/login";
 
 import useAuth from "../hooks/useAuth";
+import { ErrorPage } from "../pages/404";
 
 
 const Private = ({ Item })=>{
@@ -19,6 +20,7 @@ export const Router = () => {
         <Route path="/login-register-app/" element={<Login />} />
         <Route path="/login-register-app/home" element={<Private Item={Home} />} />        
         <Route path="/login-register-app/register" element={<Register />} />
+        <Route path="/login-register-app/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
