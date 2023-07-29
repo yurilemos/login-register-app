@@ -22,12 +22,12 @@ export const Register = () => {
     }
     showNotification("User created successfully");
     
-    navigate("/login-register-app/login");
+    navigate("/login-register-app/");
   };
 
   return (
     <div className="content">
-      <SigninSignupForm type={2} onSubmit={onSubmit} onChangeRoute={()=>{navigate("/login-register-app/login");}} error={error} />
+      <SigninSignupForm type={2} onSubmit={onSubmit} onChangeRoute={()=>{navigate("/login-register-app/");}} error={error} />
     </div>
   )
 }

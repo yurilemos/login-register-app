@@ -11,7 +11,7 @@ export const HomeComporent = () => {
 
   const exitHome = () => {
     signout();
-    navigate("/login-register-app/login");
+    navigate("/login-register-app/");
   }
 
   return (
