@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import SigninSignupForm from "../../components/signinSignupForm";
+import { useToast } from "../../contexts/toastProvider";
 
 export const Register = () => {
   const { signup } = useAuth();
   const navigate = useNavigate();
+  const { showNotification } = useToast();
 
   const [ error, setError ] = useState("");
 
@@ -18,8 +20,8 @@ export const Register = () => {
       setError(res);
       return;
     }
-
-    alert("user created successfully");
+    showNotification("User created successfully");
+    
     navigate("/login-register-app/login");
   };
 

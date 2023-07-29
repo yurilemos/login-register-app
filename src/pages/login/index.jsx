@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import SigninSignupForm from "../../components/signinSignupForm";
+import { useToast } from "../../contexts/toastProvider";
 
 export const Login = () => {
   const { signin } = useAuth();
   const navigate = useNavigate();
+  const { showNotification } = useToast();
 
 
   const [ error, setError ] = useState("");
@@ -20,7 +22,8 @@ export const Login = () => {
       return;
     }
 
-    alert("user found successfully");
+    showNotification("User logged in successfully!")
+    
     navigate("/login-register-app/home");
   };
 
